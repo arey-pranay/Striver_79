@@ -24,4 +24,9 @@
   - https://chatgpt.com/share/670061e3-3341-4d82-8c8c-fd2257183619
   - Sum of nums give a-b and sum of squares of nums give a2 - b2. (Expected - Actual). Use math after this. Amazing wow.
 
-### 7. 
+### 7. Count Inversions 🤯
+
+### 8. Maximum Product Subarray 
+  - Product from front to back. 0 to n. when product = 0, reset it to 1. max=Math.max(max,product)
+  - Product from back to front. n to 0. when product = 0, reset it to 1. max=Math.max(max,product)
+
