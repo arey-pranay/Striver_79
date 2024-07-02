@@ -47,20 +47,24 @@
 // }
 
 class Solution {
- public boolean search(int[] nums, int target) {
+ 
+public boolean search(int[] nums, int target) {
     int start = 0;
     int end = nums.length - 1;
     
     while (start <= end) {
         int mid = start + (end - start) / 2;
         
+        // Case 1: If the middle element is the target, return true
         if (nums[mid] == target) {
             return true;
         }
         
+        // Case 2: Handle the case where there are duplicates at start and end
         if (nums[start] == nums[mid] && nums[end] == nums[mid]) {
-            start++; //or end--
+            start++;
         } 
+        // Case 3: Left half is sorted
         else if (nums[mid] >= nums[start]) {
             if (target >= nums[start] && target < nums[mid]) {
                 end = mid - 1;
@@ -68,6 +72,7 @@ class Solution {
                 start = mid + 1;
             }
         } 
+        // Case 4: Right half is sorted
         else {
             if (target > nums[mid] && target <= nums[end]) {
                 start = mid + 1;
@@ -78,5 +83,6 @@ class Solution {
     }
     return false;
 }
+
 
 }
