@@ -1,4 +1,5 @@
 class Solution {
+    //only for unique elements
     public int findMin(int[] nums) {
         return nums[findBreakPoint(nums,0,nums.length-1)];
     }
@@ -9,3 +10,4 @@ class Solution {
         return findBreakPoint(nums,start,mid);
     }
 }
+
