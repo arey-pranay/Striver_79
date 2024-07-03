@@ -44,4 +44,7 @@
   - An element which breaks the sorted order. In every call of bs if(nums[mid+1]<nums[mid]) it means that the peak was broken somewhere before mid, so call with (nums,start,mid)
   - Otherwise call with (nums,mid+1,end).
 
-### 12. 
+### 12. Koko eating bananas
+  - Use ceiling value for a pile. Try different speeds and calculate the total time. Apply Binary Search on possible speeds to find min possible speed where timeTaken is less that h.
+  - Initially take min = 1pile/hr = Math.ceilDiv(sum, h); and max = Math.min(Math.ceilDiv(sum, h - piles.length + 1), maxN). Then calculate time, time += (i + mid - 1)/mid; for each mid, and then shift min or max. return the value of max at the end then. 
+
